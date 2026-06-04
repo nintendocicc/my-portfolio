@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julianna Leila Castillo — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav>
+        <div class="nav-logo">Julianna<span>.</span></div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="your-cv.pdf" target="_blank" rel="noopener" class="btn-cv">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          View CV
+        </a>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="greeting">Welcome to My Portfolio</p>
+            <h1>Hello, I'm<br /><em>Julianna Leila Castillo</em></h1>
+            <p class="tagline">
+              An aspiring web developer passionate about building clean,
+              accessible, and beautifully designed websites. Currently studying
+              at Placeholder University.
+            </p>
+            <a href="#about" class="btn btn-primary">Learn More About Me</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+          <figure class="hero-photo">
+            <img
+              src="https://placehold.co/200x200/c9581a/fdfaf4?text=Photo"
+              alt="Profile picture of Julianna Leila Castillo"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <div class="container">
+        <p class="section-label">Get to Know Me</p>
+        <h2 class="section-title">About Me</h2>
+        <div class="divider"></div>
+
+        <!-- Row 1: Personal bio + Hobbies/Facts -->
+        <div class="about-top">
+          <div class="about-text">
+            <h3>Personal Background</h3>
+            <p>
+              Hi! I'm <strong>Julianna Leila Castillo</strong>, a 20-year-old
+              student from Placeholder City, Philippines. I grew up with a
+              curiosity for how things work — especially technology. From
+              tinkering with old computers to building my first web page, I've
+              always loved the creative side of coding.
+            </p>
+            <p>
+              When I'm not studying, you'll usually find me playing chess
+              online, sketching UI concepts on paper, or exploring the latest
+              trends in frontend development.
+            </p>
+
+            <h3>Goals &amp; Ambitions</h3>
+            <p>
+              My goal is to become a
+              <strong>full-stack web developer</strong> and eventually
+              contribute to open-source projects that make the web more
+              accessible. I dream of building products that solve real problems
+              for real people.
+            </p>
+          </div>
+
+          <div class="about-meta">
+            <h3>Hobbies &amp; Interests</h3>
+            <div class="hobby-grid">
+              <div class="hobby-tile span3 c1">
+                <span class="h-icon">🎨</span>
+                <span class="h-label">Web Design &amp; Frontend Dev</span>
+              </div>
+              <div class="hobby-tile span3 c2">
+                <span class="h-icon">♟️</span>
+                <span class="h-label">Chess &amp; Puzzle Games</span>
+              </div>
+              <div class="hobby-tile span2 c3">
+                <span class="h-icon">✏️</span>
+                <span class="h-label">Digital Illustration</span>
+              </div>
+              <div class="hobby-tile span2 c4">
+                <span class="h-icon">📖</span>
+                <span class="h-label">Tech Blogs &amp; Tutorials</span>
+              </div>
+              <div class="hobby-tile span2 c5">
+                <span class="h-icon">🎬</span>
+                <span class="h-label">Science &amp; Tech Docs</span>
+              </div>
+            </div>
+
+            <h3>Quick Facts</h3>
+            <ul>
+              <li>📍 Based in Placeholder City, PH</li>
+              <li>🎓 2nd Year IT Student</li>
+              <li>💻 HTML, CSS &amp; JS Enthusiast</li>
+              <li>🌐 Open to Internship Opportunities</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Row 2: Education Cards -->
+        <p class="edu-heading">Educational Background</p>
+        <div class="edu-cards">
+          <div class="edu-card">
+            <div class="edu-card-icon elem">🏫</div>
+            <span class="edu-card-tag tag-done">Completed</span>
+            <h4>Elementary Education</h4>
+            <p class="edu-degree">Grade School Diploma</p>
+            <p class="edu-school">
+              Placeholder Elementary School<br />General Education
+            </p>
+            <p class="edu-year">2012 — 2018</p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-icon shs">🎓</div>
+            <span class="edu-card-tag tag-done">Completed</span>
+            <h4>Senior High School</h4>
+            <p class="edu-degree">ICT — Computer Programming Track</p>
+            <p class="edu-school">
+              Placeholder National High School<br />STEM / ICT Strand
+            </p>
+            <p class="edu-year">2018 — 2024</p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-icon college">🏛️</div>
+            <span class="edu-card-tag tag-ongoing">Ongoing</span>
+            <h4>Bachelor's Degree</h4>
+            <p class="edu-degree">BS Information Technology</p>
+            <p class="edu-school">
+              Placeholder State University<br />2nd Year, 1st Semester
+            </p>
+            <p class="edu-year">2024 — Present</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-label">What I Can Do</p>
+        <h2 class="section-title">My Skills</h2>
+        <div class="divider"></div>
+
+        <div class="skills-layout">
+          <!-- Progress Bars -->
+          <div class="skill-card">
+            <h3>Technical Skills</h3>
+            <ul style="list-style: none; padding: 0">
+              <li class="skill-item">
+                <label><span>HTML</span><span>85%</span></label>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 85%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <label><span>CSS</span><span>78%</span></label>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 78%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <label><span>JavaScript</span><span>65%</span></label>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 65%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <label><span>Responsive Design</span><span>70%</span></label>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 70%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <label><span>Git &amp; GitHub</span><span>55%</span></label>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 55%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Summary Table -->
+          <div class="skill-card">
+            <h3>Skill Summary</h3>
+            <div class="skills-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Skill</th>
+                    <th>Category</th>
+                    <th>Level</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HTML5</td>
+                    <td>Technical</td>
+                    <td><span class="badge">Advanced</span></td>
+                  </tr>
+                  <tr>
+                    <td>CSS3</td>
+                    <td>Technical</td>
+                    <td><span class="badge">Intermediate</span></td>
+                  </tr>
+                  <tr>
+                    <td>JavaScript</td>
+                    <td>Technical</td>
+                    <td><span class="badge">Beginner</span></td>
+                  </tr>
+                  <tr>
+                    <td>Communication</td>
+                    <td>Soft Skill</td>
+                    <td><span class="badge">Advanced</span></td>
+                  </tr>
+                  <tr>
+                    <td>Problem Solving</td>
+                    <td>Soft Skill</td>
+                    <td><span class="badge">Intermediate</span></td>
+                  </tr>
+                  <tr>
+                    <td>Teamwork</td>
+                    <td>Soft Skill</td>
+                    <td><span class="badge">Advanced</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label">My Work</p>
+        <h2 class="section-title">Projects &amp; Gallery</h2>
+        <div class="divider"></div>
+
+        <div class="gallery" data-project-gallery></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <p class="section-label">Say Hello</p>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="divider"></div>
+
+        <div class="contact-wrap">
+          <div class="contact-info">
+            <p>
+              I'm currently open to internship opportunities, collaborations,
+              and any questions you might have. Feel free to send me a message
+              and I'll get back to you as soon as possible!
+            </p>
+            <address>
+              <strong>Email:</strong> juliannaleilacastillo@gmail.com<br />
+              <strong>Phone:</strong> +63 969 160 0844<br />
+              <strong>Location:</strong> Quezon City, Philippines<br />
+              <strong>School:</strong> Polytechnic University of the Philippines
+              – Sta. Mesa, Manila<br />
+            </address>
+
+            <div class="social-links">
+              <!-- LinkedIn -->
+              <a
+                href="#"
+                data-social-link="linkedin"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+              >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="currentColor"
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <!-- GitHub -->
+              <a
+                href="#"
+                data-social-link="github"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+              >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="currentColor"
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="fname">Full Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="name"
+                placeholder="e.g. Maria Santos"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input
+                type="email"
+                id="femail"
+                name="email"
+                placeholder="e.g. maria@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea
+                id="fmessage"
+                name="message"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2026 <span>Julianna Leila Castillo</span>. All rights reserved.
+      </p>
+      <div class="footer-socials">
+        <a
+          href="#"
+          data-social-link="linkedin"
+          target="_blank"
+          rel="noopener"
+          class="footer-social-icon"
+          aria-label="LinkedIn"
+        >
+          <svg viewBox="0 0 24 24" fill="white">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+        </a>
+        <a
+          href="#"
+          data-social-link="github"
+          target="_blank"
+          rel="noopener"
+          class="footer-social-icon"
+          aria-label="GitHub"
+        >
+          <svg viewBox="0 0 24 24" fill="white">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
