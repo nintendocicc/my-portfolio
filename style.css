@@ -14,7 +14,6 @@
   --ff-body: "DM Sans", sans-serif;
 }
 
-/* ── Reset ─────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -44,8 +43,6 @@ img {
   max-width: 100%;
   display: block;
 }
-
-/* ── Utilities ─────────────────────────────────── */
 .container {
   max-width: 1060px;
   margin: 0 auto;
@@ -85,8 +82,6 @@ img {
   padding: 3px 10px;
   border-radius: 20px;
 }
-
-/* ── NAV ───────────────────────────────────────── */
 header {
   position: sticky;
   top: 0;
@@ -161,8 +156,6 @@ nav ul li a:hover {
   width: 14px;
   height: 14px;
 }
-
-/* ── HERO / HOME ───────────────────────────────── */
 #home {
   padding: 90px 0 70px;
   position: relative;
@@ -255,8 +248,6 @@ nav ul li a:hover {
   height: 100%;
   object-fit: cover;
 }
-
-/* ── ABOUT ─────────────────────────────────────── */
 #about {
   background: var(--white);
   padding: 80px 0;
@@ -312,8 +303,6 @@ nav ul li a:hover {
   color: var(--accent);
   font-size: 0.8rem;
 }
-
-/* Hobby bento grid */
 .hobby-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -350,14 +339,12 @@ nav ul li a:hover {
   color: var(--ink);
   line-height: 1.25;
 }
-/* span rules */
 .hobby-tile.span2 {
   grid-column: span 2;
 }
 .hobby-tile.span3 {
   grid-column: span 3;
 }
-/* colors */
 .hobby-tile.c1 {
   background: #fff0e6;
 }
@@ -376,8 +363,6 @@ nav ul li a:hover {
 .hobby-tile.c6 {
   background: #e6f7f7;
 }
-
-/* Education cards */
 .edu-heading {
   font-family: var(--ff-head);
   font-size: 1.25rem;
@@ -400,7 +385,6 @@ nav ul li a:hover {
   gap: 20px;
   position: relative;
 }
-/* connector line between cards */
 .edu-cards::before {
   content: "";
   position: absolute;
@@ -503,8 +487,6 @@ nav ul li a:hover {
   content: "🗓";
   font-size: 0.8rem;
 }
-
-/* ── SKILLS ────────────────────────────────────── */
 #skills {
   padding: 80px 0;
 }
@@ -531,7 +513,6 @@ nav ul li a:hover {
   border-bottom: 2px solid var(--accent);
   display: inline-block;
 }
-/* Progress bars */
 .skill-item {
   margin-bottom: 14px;
 }
@@ -555,7 +536,6 @@ nav ul li a:hover {
   border-radius: 20px;
   transition: width 1s ease;
 }
-/* Skills table */
 .skills-table-wrap {
   overflow-x: auto;
   margin-top: 8px;
@@ -593,7 +573,7 @@ tbody td:first-child {
   font-weight: 500;
 }
 
-/* ── PROJECTS ──────────────────────────────────── */
+/* ── PROJECTS — consistent gallery ── */
 #projects {
   background: var(--white);
   padding: 80px 0;
@@ -604,8 +584,11 @@ tbody td:first-child {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  align-items: start;
 }
 .gallery-card {
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg-alt);
@@ -614,7 +597,6 @@ tbody td:first-child {
   transition:
     transform 0.2s,
     box-shadow 0.2s;
-  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -623,11 +605,16 @@ tbody td:first-child {
   box-shadow: 0 12px 36px rgba(26, 18, 8, 0.14);
   opacity: 1;
 }
+
+/* Single consistent thumbnail */
 .project-media {
-  height: 220px;
-  display: grid;
-  gap: 4px;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
   background: var(--border);
+  flex-shrink: 0;
+  display: block;
 }
 .project-media img {
   width: 100%;
@@ -635,25 +622,37 @@ tbody td:first-child {
   object-fit: cover;
   display: block;
 }
-.project-media--1 {
-  grid-template-columns: 1fr;
+.project-media img + img {
+  display: none;
 }
-.project-media--2 {
-  grid-template-columns: 1fr 1fr;
-}
-.project-media--3 {
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-rows: 1fr 1fr;
-}
-.project-media--3 img:first-child {
-  grid-row: 1 / span 2;
-}
+.project-media--1,
+.project-media--2,
+.project-media--3,
 .project-media--4 {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: block;
 }
+
+/* Photo-count badge */
+.project-media-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  background: rgba(26, 18, 8, 0.55);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
 .gallery-card figcaption {
   padding: 16px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .project-heading {
   display: flex;
@@ -680,12 +679,13 @@ tbody td:first-child {
   border: 1px solid var(--border);
   background: var(--white);
   color: var(--ink-light);
+  white-space: nowrap;
 }
 .project-role-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .project-role-pill {
   font-size: 0.68rem;
@@ -701,6 +701,7 @@ tbody td:first-child {
 .gallery-card figcaption p {
   font-size: 0.82rem;
   color: var(--ink-light);
+  flex: 1;
 }
 .gallery-card .card-link-hint {
   display: inline-flex;
@@ -710,13 +711,13 @@ tbody td:first-child {
   font-weight: 500;
   color: var(--accent);
   margin-top: 10px;
+  align-self: flex-start;
 }
 .gallery-card .card-link-hint svg {
   width: 13px;
   height: 13px;
 }
 
-/* ── CONTACT ───────────────────────────────────── */
 #contact {
   padding: 80px 0;
 }
@@ -797,8 +798,6 @@ textarea {
   background: #a84215;
   transform: translateY(-2px);
 }
-
-/* ── FOOTER ────────────────────────────────────── */
 footer {
   background: var(--ink);
   color: var(--bg);
@@ -809,8 +808,6 @@ footer {
 footer span {
   color: var(--accent);
 }
-
-/* ── SOCIAL ICONS ──────────────────────────────── */
 .social-links {
   display: flex;
   gap: 14px;
@@ -882,8 +879,6 @@ footer span {
   width: 16px;
   height: 16px;
 }
-
-/* ── RESPONSIVE ────────────────────────────────── */
 @media (max-width: 760px) {
   .hero-inner {
     grid-template-columns: 1fr;

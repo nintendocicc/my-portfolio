@@ -96,22 +96,21 @@ const projects = [
 ];
 
 function renderProjectMedia(images) {
-  const limitedImages = images.slice(0, 4);
-  const countClass = `project-media--${limitedImages.length}`;
+  const primary = images[0];
+  const extra = images.length > 1 ? images.length - 1 : 0;
+  const badge =
+    extra > 0
+      ? `<span class="project-media-badge">+${extra} photo${extra > 1 ? "s" : ""}</span>`
+      : "";
 
   return `
-    <div class="project-media ${countClass}">
-      ${limitedImages
-        .map(
-          (image, index) => `
-            <img
-              src="${image.src}"
-              alt="${image.alt}"
-              loading="lazy"
-            />
-          `,
-        )
-        .join("")}
+    <div class="project-media">
+      <img
+        src="${primary.src}"
+        alt="${primary.alt}"
+        loading="lazy"
+      />
+      ${badge}
     </div>
   `;
 }
