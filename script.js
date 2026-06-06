@@ -1,12 +1,10 @@
 async function handleSubmit(event) {
-  // Prevent the default page reload
   event.preventDefault();
 
   const form = event.target;
   const name = document.getElementById("fname").value.trim();
   const formData = new FormData(form);
 
-  // Optional: Change button text while sending to show it's working
   const submitBtn = form.querySelector(".btn-submit");
   const originalBtnText = submitBtn.innerText;
   submitBtn.innerText = "Sending...";
@@ -20,7 +18,6 @@ async function handleSubmit(event) {
     const data = await response.json();
 
     if (data.success) {
-      // If successful, show your custom alert and reset the form
       alert(
         "Thank you for contacting me, " +
           name +
@@ -28,16 +25,13 @@ async function handleSubmit(event) {
       );
       form.reset();
     } else {
-      // If Web3Forms returns an error
       alert("Something went wrong. Please try again.");
     }
   } catch (error) {
-    // If there is a network issue
     alert(
       "There was an error sending your message. Please check your connection.",
     );
   } finally {
-    // Reset button text
     submitBtn.innerText = originalBtnText;
   }
 }
