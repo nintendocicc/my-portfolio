@@ -48,30 +48,30 @@ const socialLinks = {
 };
 
 const projects = [
-  {
-    title: "Pasuyo",
-    year: 2026,
-    roles: ["UI/UX Designer", "Front-End Developer"],
-    description:
-      "A pure-CSS drawing of a sunset scene made entirely with div elements and CSS styling for a class activity.",
-    links: {
-      figma:
-        "https://www.figma.com/design/wBWgPDLydWkPMY9j5QgOfv/Pasuyo-App?node-id=0-1&t=OOGb9QuCtIAPmxGy-1",
-    },
-    images: [
-      {
-        src: "https://placehold.co/600x220/7a5e2e/fdfaf4?text=Project+4",
-        alt: "Screenshot of the CSS Art sunset scene",
-      },
-    ],
-  },
+  // {
+  //   title: "Pasuyo",
+  //   year: 2026,
+  //   roles: ["UI/UX Designer", "Front-End Developer"],
+  //   description:
+  //     "A mobile app UI/UX design for an errand/delivery service, designed in Figma with user flows and interface mockups.",
+  //   links: {
+  //     figma:
+  //       "https://www.figma.com/design/wBWgPDLydWkPMY9j5QgOfv/Pasuyo-App?node-id=0-1&t=OOGb9QuCtIAPmxGy-1",
+  //   },
+  //   images: [
+  //     {
+  //       src: "https://placehold.co/600x220/7a5e2e/fdfaf4?text=Project+4",
+  //       alt: "Screenshot of the CSS Art sunset scene",
+  //     },
+  //   ],
+  // },
   {
     title: "Takbo, Jusko!",
     year: 2026,
     roles: ["Game Designer", "Front-End Developer"],
     languages: ["GDScript"],
     description:
-      "A pure-CSS drawing of a sunset scene made entirely with div elements and CSS styling for a class activity.",
+      "A 2D runner game built in Godot using GDScript, featuring an itch.io character art and gameplay mechanics.",
     links: {
       demo: "https://fvlsky.github.io/takbo-jusko/?fbclid=IwY2xjawSPkqFleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeAdUfS15iO-6xS1RWIB_NCU6mb3gIu-tDjdGPpOsWZsrjUo7RZnM-jVEA8Ww_aem_OPd-TA5bI8ONL81lkII49A",
       github: "https://github.com/FvlSky/takbo-jusko",
@@ -89,7 +89,7 @@ const projects = [
     roles: ["UI/UX Designer", "Front-End Developer"],
     languages: ["C#", "Tailwind CSS"],
     description:
-      "A pure-CSS drawing of a sunset scene made entirely with div elements and CSS styling for a class activity.",
+      "A pet management system built with C# and Tailwind CSS, featuring registration, appointment scheduling, and pet records.",
     links: {
       figma:
         "https://www.figma.com/design/6DVulViT8UqeF4Afyikxfo/BaraBara-Lexical-Analyzer?node-id=7-60&t=5w9Om4WGCU06nAPo-1",
@@ -110,7 +110,7 @@ const projects = [
     roles: ["UI/UX Designer", "Front-End Developer"],
     languages: ["React", "Tailwind CSS"],
     description:
-      "A pure-CSS drawing of a sunset scene made entirely with div elements and CSS styling for a class activity.",
+      "A network security dashboard UI built with React and Tailwind CSS, visualizing threat detection and prevention logs.",
     links: {
       figma:
         "https://www.figma.com/design/qVChkNQ3HTn07Aa7kzDOov/AUTOMATA-PROJECT?node-id=1-3&t=Lz9dEDtcX733m4Z6-1",
@@ -129,7 +129,7 @@ const projects = [
     roles: ["UI/UX Designer", "Front-End Developer"],
     languages: ["React", "Tailwind CSS"],
     description:
-      "A pure-CSS drawing of a sunset scene made entirely with div elements and CSS styling for a class activity.",
+      "A lexical analyzer web app built with React and Tailwind CSS, designed to tokenize and analyze input strings.",
     links: {
       figma:
         "https://www.figma.com/design/6DVulViT8UqeF4Afyikxfo/BaraBara-Lexical-Analyzer?node-id=7-60&t=5w9Om4WGCU06nAPo-1",
@@ -148,7 +148,7 @@ const projects = [
     roles: ["UI/UX Designer", "Front-End Developer"],
     languages: ["React", "Tailwind CSS"],
     description:
-      "An interactive multiple-choice quiz app built with vanilla JavaScript. Tracks score and displays results at the end.",
+      "A government assistance information platform built with React and Tailwind CSS, helping Filipinos find relevant aid programs.",
     links: {
       github: "https://github.com/RaiGZ971/PhilAssist",
     },
@@ -164,7 +164,7 @@ const projects = [
     year: 2025,
     roles: ["UI/UX Designer", "Front-End Developer"],
     description:
-      "A responsive landing page for a fictional coffee shop, featuring a hero section, menu table, and a working inquiry form.",
+      "A job-matching platform UI designed for Filipino workers, featuring job browsing and application flows built with React and Tailwind CSS.",
     languages: ["React", "Tailwind CSS"],
     links: {
       document:
@@ -184,7 +184,7 @@ const projects = [
     year: 2025,
     roles: ["UI/UX Designer", "Front-End Developer"],
     description:
-      "A simple multi-page blog built with HTML and CSS as a school activity. Includes articles, a sidebar, and a contact page.",
+      "An online marketplace web app built with React and Tailwind CSS, showcasing product listings and a Figma-designed UI.",
     languages: ["React", "Tailwind CSS"],
     links: {
       figma:
@@ -248,14 +248,12 @@ function renderProjects() {
 
       return `
         <article class="gallery-card portrait-card">
-          <!-- Top: Image Container -->
           <div class="gallery-card-image">
             <img src="${primary.src}" alt="${primary.alt}" loading="lazy" />
             <div class="project-year-badge">${project.year}</div>
             ${badge}
           </div>
           
-          <!-- Bottom: Content Container -->
           <div class="gallery-card-content">
             <div class="project-heading">
               <h4>${project.title}</h4>
@@ -267,7 +265,6 @@ function renderProjects() {
             <p class="project-description">${project.description}</p>
             ${languagePills}
             
-            <!-- Footer: Action Links -->
             <div class="gallery-card-footer">
               ${actionButtons}
             </div>
